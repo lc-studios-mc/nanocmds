@@ -1,0 +1,10 @@
+{
+	"extends": "./tsconfig.base.json",
+	"compilerOptions": {
+		"rootDir": "./src/bp/scripts/",
+		"lib": ["es2023"],
+		"types": [],
+		"noEmit": true
+	},
+	"include": ["src/bp/scripts/**/*.js"]
+}

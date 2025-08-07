@@ -1,0 +1,31 @@
+{
+	"format_version": 2,
+	"header": {
+		"description": "Some very short and useful commands.",
+		"name": "NanoCmds DEV",
+		"uuid": "996fccab-67f8-4ca6-a384-9f1bd58194b6",
+		"version": [0, 0, 1],
+		"min_engine_version": [1, 21, 100]
+	},
+	"modules": [
+		{
+			"description": "Behavior pack",
+			"type": "data",
+			"uuid": "cfe8a222-2757-40c1-83f8-44c3ba7c1d3c",
+			"version": [0, 0, 1]
+		},
+		{
+			"uuid": "f4700334-afc1-4fc5-ae42-d35dcdd11a3d",
+			"version": [0, 0, 1],
+			"type": "script",
+			"language": "javascript",
+			"entry": "scripts/main.js"
+		}
+	],
+	"dependencies": [
+		{
+			"module_name": "@minecraft/server",
+			"version": "2.1.0"
+		}
+	]
+}
