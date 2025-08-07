@@ -10,11 +10,8 @@ export function getDevPackDirs() {
 		"LocalState/games/com.mojang",
 	);
 
-	const devBehaviorPacks = path.join(comMojang, "development_behavior_packs");
-	const devResourcePacks = path.join(comMojang, "development_resource_packs");
-
-	const behaviorPacks = path.join(devBehaviorPacks, "nanocmds_bp");
-	const resourcePacks = path.join(devResourcePacks, "nanocmds_rp");
+	const behaviorPacks = path.join(comMojang, "development_behavior_packs");
+	const resourcePacks = path.join(comMojang, "development_resource_packs");
 
 	return {
 		behaviorPacks,
