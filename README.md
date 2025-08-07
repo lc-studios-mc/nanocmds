@@ -1,6 +1,6 @@
 # NanoCmds
 
-A collection of useful commands for Minecraft Bedrock that can be executed with very few keystrokes.
+A simple behavior pack for Minecraft Bedrock that contains useful commands that can be executed with very few keystrokes.
 
 ## For Developers :computer:
 
