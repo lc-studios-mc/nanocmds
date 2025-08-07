@@ -1,0 +1,15 @@
+{
+	"version": "0.3.0",
+	"configurations": [
+		{
+			// https://marketplace.visualstudio.com/items?itemName=mojang-studios.minecraft-debugger
+			"type": "minecraft-js",
+			"request": "attach",
+			"name": "Debug with Minecraft",
+			"mode": "listen",
+			"targetModuleUuid": "f4700334-afc1-4fc5-ae42-d35dcdd11a3d",
+			"localRoot": "${workspaceFolder}/src/bp/scripts/",
+			"port": 19144
+		}
+	]
+}
