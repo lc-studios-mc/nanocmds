@@ -32,6 +32,7 @@ await syncdir("src/bp", bpOutDir, {
 	watch: true,
 	deleteOrphaned: true,
 	chokidarWatchOptions,
+	exclude: /\.tsx?$/,
 	afterEachSync,
 });
 
