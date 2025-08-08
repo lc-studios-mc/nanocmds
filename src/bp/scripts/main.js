@@ -2,3 +2,4 @@
 // modules that contain business logic.
 
 import "./commands/nv_toggle.js";
+import "./commands/spectator_toggle.js";
