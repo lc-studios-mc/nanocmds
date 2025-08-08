@@ -6,5 +6,5 @@
 		"types": [],
 		"noEmit": true
 	},
-	"include": ["src/bp/scripts/**/*.js"]
+	"include": ["src/bp/scripts/**/*.js", "src/bp/scripts/**/*.ts"]
 }
