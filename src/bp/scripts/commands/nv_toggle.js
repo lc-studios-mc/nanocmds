@@ -1,5 +1,6 @@
 import * as mc from "@minecraft/server";
 import { defineCommandCallback } from "../shared.js";
+import { prefixCommandDescription } from "../utils.js";
 
 const callback = defineCommandCallback((origin) => {
 	const player = origin.sourceEntity;
@@ -32,7 +33,7 @@ mc.system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
 	customCommandRegistry.registerCommand(
 		{
 			name: "n:v",
-			description: "Toggles the night vision effect.",
+			description: prefixCommandDescription("Toggles the night vision effect."),
 			permissionLevel: mc.CommandPermissionLevel.Admin,
 			cheatsRequired: true,
 		},
