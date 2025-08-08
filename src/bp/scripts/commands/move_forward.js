@@ -10,6 +10,9 @@ import { Vec3 } from "../utils/vec3.js";
 const teleport = (player, location) => {
 	player.teleport(location);
 	player.onScreenDisplay.setActionBar("Moved forward");
+	mc.system.runTimeout(() => {
+		player.playSound("mob.shulker.teleport", { location: player.location });
+	}, 1);
 };
 
 const callback = defineCommandCallback((origin) => {
