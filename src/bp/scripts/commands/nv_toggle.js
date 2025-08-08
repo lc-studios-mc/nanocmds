@@ -1,5 +1,5 @@
 import * as mc from "@minecraft/server";
-import { defineCommandCallback } from "../shared.js";
+import { defineCommandCallback } from "../define-command.js";
 import { prefixCommandDescription } from "../utils.js";
 
 const callback = defineCommandCallback((origin) => {
