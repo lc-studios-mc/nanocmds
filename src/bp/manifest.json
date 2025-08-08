@@ -1,7 +1,7 @@
 {
 	"format_version": 2,
 	"header": {
-		"description": "Contains useful commands that can be executed with very few keystrokes.",
+		"description": "Useful commands that require very few keystrokes.",
 		"name": "NanoCmds DEV",
 		"uuid": "996fccab-67f8-4ca6-a384-9f1bd58194b6",
 		"version": [0, 0, 1],
