@@ -22,6 +22,11 @@
 			"entry": "scripts/main.js"
 		}
 	],
+	"metadata": {
+		"author": "LC Studios MC",
+		"license": "CC0 1.0 Universal",
+		"url": "https://github.com/lc-studios-mc/nanocmds"
+	},
 	"dependencies": [
 		{
 			"module_name": "@minecraft/server",
