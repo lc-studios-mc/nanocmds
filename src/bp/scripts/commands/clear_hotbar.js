@@ -1,6 +1,6 @@
 import * as mc from "@minecraft/server";
-import { defineCommandCallback } from "../define_command.js";
-import { prefixCommandDescription } from "../utils.js";
+import { defineCommandCallback } from "../utils/define_command.js";
+import { prefixCommandDescription } from "../utils/misc.js";
 
 const callback = defineCommandCallback((origin) => {
 	const player = origin.sourceEntity;
