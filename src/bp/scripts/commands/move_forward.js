@@ -58,7 +58,7 @@ const callback = defineCommandCallback((origin) => {
 mc.system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
 	customCommandRegistry.registerCommand(
 		{
-			name: "n:x",
+			name: "n:f",
 			description: prefixCommandDescription(
 				"Moves forward 100 blocks. Stops when the ray hits a block.",
 			),
