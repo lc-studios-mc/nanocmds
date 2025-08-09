@@ -3,6 +3,7 @@
 
 import "./commands/clear_effects.js";
 import "./commands/clear_hotbar.js";
+import "./commands/help.js";
 import "./commands/kill_item.js";
 import "./commands/move_forward.js";
 import "./commands/nv_toggle.js";
