@@ -36,7 +36,7 @@ if (fs.existsSync(bpOutDir)) {
 }
 
 if (fs.existsSync(mcpackFile)) {
-	await fs.promises.rm(bpOutDir, { recursive: true });
+	await fs.promises.rm(mcpackFile, { recursive: true });
 	console.log("Removed previous build file");
 }
 
