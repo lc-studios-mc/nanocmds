@@ -9,7 +9,6 @@ A simple Minecraft Bedrock behavior pack with useful commands that require very 
 - Git
 - Node.js (v22 or later)
 - pnpm
-- Visual Studio Code (optional, for debugging)
 
 ### Installation
 
