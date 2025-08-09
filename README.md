@@ -1,6 +1,12 @@
 # NanoCmds
 
-A simple Minecraft Bedrock behavior pack with useful commands that require very few keystrokes.
+A simple Minecraft Bedrock behavior pack with useful commands that require very few keystrokes. 🤩
+
+![Showcase GIF](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzM5bWNzOWlzdXExYnJpczEzcDh5cWRyaDB4dmY3aGt0ODA5eTdsbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TiXaxy3OtIfSStfGLP/giphy.gif)
+
+- **Run `/nanocmds_help` to display the help menu.**
+- This pack requires Minecraft Bedrock 1.21.100 or later.
+- This pack does NOT require any experiments. 👍
 
 ## For Developers :computer:
 
@@ -33,11 +39,13 @@ pnpm install
 4. Copy the pack folder into Minecraft (`com.mojang/development...`).
 
 ```bash
-# Changes will be synced automatically!
+# File changes will be synced in real-time!
 pnpm run dev
 ```
 
 ### How to create a distributable file (.mcpack)
+
+Run the build script from command-line:
 
 ```bash
 node scripts/build.js --version MAJOR.MINOR.PATCH # Replace with correct version, such as 1.0.0
