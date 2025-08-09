@@ -39,7 +39,7 @@ pnpm install
 4. Copy the pack folder into Minecraft (`com.mojang/development...`).
 
 ```bash
-# Changes will be synced automatically!
+# File changes will be synced in real-time!
 pnpm run dev
 ```
 
