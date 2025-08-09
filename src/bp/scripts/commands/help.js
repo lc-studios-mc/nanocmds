@@ -34,7 +34,9 @@ Run it again and the effect is gone.`,
 
 	formData.header("Custom Commands");
 
-	formData.label(`You can define up to 9 custom commands.`);
+	formData.label(
+		`You can use the command §b/qs§f to set up to 10 (0~9) custom commands.`,
+	);
 
 	formData.label(`For example, run §b/qs 0 "say Hello World"§f.
 Then, run §b/q 0§f, and you will say Hello World in the chat!`);
