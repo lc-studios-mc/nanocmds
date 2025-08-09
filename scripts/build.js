@@ -28,16 +28,19 @@ if (!/^\d+\.\d+\.\d+$/.test(version)) {
 const versionArray = version.split(".").map((v) => Number(v));
 
 const bpOutDir = path.join("dist", `nanocmds-${args.values.version}`);
+const zipFile = path.join("dist", `nanocmds-${args.values.version}.zip`);
 const mcpackFile = path.join("dist", `nanocmds-${args.values.version}.mcpack`);
 
 if (fs.existsSync(bpOutDir)) {
 	await fs.promises.rm(bpOutDir, { recursive: true });
-	console.log("Removed previous build directory");
+}
+
+if (fs.existsSync(zipFile)) {
+	await fs.promises.rm(zipFile);
 }
 
 if (fs.existsSync(mcpackFile)) {
-	await fs.promises.rm(mcpackFile, { recursive: true });
-	console.log("Removed previous build file");
+	await fs.promises.rm(mcpackFile);
 }
 
 await syncdir("src/bp", bpOutDir, {
@@ -71,9 +74,11 @@ await fs.promises.writeFile(
 
 console.log("Generated manifest.json");
 
-await zipDirectory(bpOutDir, mcpackFile);
+await zipDirectory(bpOutDir, zipFile);
+console.log("Generated .zip file");
 
-console.log("Generated mcpack file");
+await zipDirectory(bpOutDir, mcpackFile);
+console.log("Generated .mcpack file");
 
 console.log(styleText("magentaBright", "Build finished!"));
 
