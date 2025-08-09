@@ -6,9 +6,10 @@ A simple Minecraft Bedrock behavior pack with useful commands that require very 
 
 ## Available Commands
 
+- `/nanocmds_help`: Display the in-game help menu.
+
 Basic:
 
-- `/nanocmds_help`: Display the help menu.
 - `/e`: Clears all effects.
 - `/c`: Clears items from your hotbar.
 - `/x`: Kill all floating items in the world.
@@ -18,9 +19,9 @@ Basic:
 
 Related to user custom commands:
 
-- `/q <index>`: Runs a user custom command.
-- `/qs <index> [command]`: Sets a user custom command. You can remove one by leaving the parameter 'command' unspecified..
-- `/ql [index]`: Logs a user custom command. You can list all entries by leaving the parameter 'index' unspecified.
+- `/q <index: number>`: Runs a user custom command.
+- `/qs <index: number> [command: string]`: Sets a user custom command. You can remove one by leaving the parameter 'command' unspecified..
+- `/ql [index: number]`: Logs a user custom command. You can list all entries by leaving the parameter 'index' unspecified.
 - `/qxx`: Clears all user custom commands.
 
 ## For Developers :computer:
