@@ -6,7 +6,7 @@ A simple Minecraft Bedrock behavior pack with useful commands that require very 
 
 - **Run `/nanocmds_help` to display the help menu.**
 - This pack requires Minecraft Bedrock 1.21.100 or later.
-- This pack does not need any experiments.
+- This pack does NOT need require experiments.
 
 ## For Developers :computer:
 
