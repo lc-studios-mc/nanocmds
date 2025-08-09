@@ -16,7 +16,10 @@ const callback = defineCommandCallback((origin) => {
 
 		if (alreadyHasEffect) {
 			player.removeEffect("night_vision");
-			player.playSound("random.pop", { location: player.location, pitch: 0.9 });
+			player.playSound("random.drink", {
+				location: player.location,
+				pitch: 0.9,
+			});
 			player.onScreenDisplay.setActionBar("Removed the night vision effect.");
 			return;
 		}
@@ -26,7 +29,7 @@ const callback = defineCommandCallback((origin) => {
 			showParticles: false,
 		});
 
-		player.playSound("random.pop", { location: player.location, pitch: 1.2 });
+		player.playSound("random.drink", { location: player.location, pitch: 1.2 });
 		player.onScreenDisplay.setActionBar("Added the night vision effect.");
 	});
 });
