@@ -45,6 +45,8 @@ pnpm run dev
 
 ### How to create a distributable file (.mcpack)
 
+Run the build script from command-line:
+
 ```bash
 node scripts/build.js --version MAJOR.MINOR.PATCH # Replace with correct version, such as 1.0.0
 ```
