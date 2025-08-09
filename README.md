@@ -4,9 +4,25 @@ A simple Minecraft Bedrock behavior pack with useful commands that require very 
 
 ![Showcase GIF](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzM5bWNzOWlzdXExYnJpczEzcDh5cWRyaDB4dmY3aGt0ODA5eTdsbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TiXaxy3OtIfSStfGLP/giphy.gif)
 
-- **Run `/nanocmds_help` to display the help menu.**
-- This pack requires Minecraft Bedrock 1.21.100 or later.
-- This pack does NOT require any experiments. 👍
+## Available Commands
+
+- `/nanocmds_help`: Display the in-game help menu.
+
+Basic:
+
+- `/e`: Clears all effects.
+- `/c`: Clears items from your hotbar.
+- `/x`: Kill all floating items in the world.
+- `/f`: Moves forward 100 blocks. Stops when the ray hits a block.
+- `/v`: Toggles the night vision effect.
+- `/s`: Toggles the spectator game mode.
+
+Related to user custom commands:
+
+- `/q <index: number>`: Runs a user custom command.
+- `/qs <index: number> [command: string]`: Sets a user custom command. You can remove one by leaving the parameter 'command' unspecified..
+- `/ql [index: number]`: Logs a user custom command. You can list all entries by leaving the parameter 'index' unspecified.
+- `/qxx`: Clears all user custom commands.
 
 ## For Developers :computer:
 
