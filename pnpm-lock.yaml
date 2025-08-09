@@ -11,6 +11,9 @@ importers:
       '@minecraft/server':
         specifier: 2.1.0
         version: 2.1.0(@minecraft/vanilla-data@1.21.100)
+      '@minecraft/server-ui':
+        specifier: 2.0.0
+        version: 2.0.0(@minecraft/vanilla-data@1.21.100)
     devDependencies:
       '@types/node':
         specifier: ^22.17.0
@@ -29,6 +32,9 @@ packages:
 
   '@minecraft/common@1.2.0':
     resolution: {integrity: sha512-JdmEq4P3Z/FtoBzhLijFgMSVFnFRrUoLwY8DHHrgtFo0mfLTOLTB1RErYjLMsA6b7BGVNxkX/pfFRiH7QZ0XwQ==}
+
+  '@minecraft/server-ui@2.0.0':
+    resolution: {integrity: sha512-K1xFK1OEJSNfIgyRElaoxDTW/nbEqjBp1YnUdyPCs4kGDglwoXNyFz3wzMOkvT04CJXSifZGcTJeWda4C6OkXw==}
 
   '@minecraft/server@2.1.0':
     resolution: {integrity: sha512-yT7MH47hqhJ3C208Y3g7bEo52aT5q9DZApxH5y3+qQ9voqazF35t3FeTd6aw2S7C07HA6yZOmNZ7p79b3PCJXg==}
@@ -172,6 +178,13 @@ packages:
 snapshots:
 
   '@minecraft/common@1.2.0': {}
+
+  '@minecraft/server-ui@2.0.0(@minecraft/vanilla-data@1.21.100)':
+    dependencies:
+      '@minecraft/common': 1.2.0
+      '@minecraft/server': 2.1.0(@minecraft/vanilla-data@1.21.100)
+    transitivePeerDependencies:
+      - '@minecraft/vanilla-data'
 
   '@minecraft/server@2.1.0(@minecraft/vanilla-data@1.21.100)':
     dependencies:
