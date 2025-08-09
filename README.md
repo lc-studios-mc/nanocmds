@@ -4,6 +4,10 @@ A simple Minecraft Bedrock behavior pack with useful commands that require very 
 
 ![Showcase GIF](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzM5bWNzOWlzdXExYnJpczEzcDh5cWRyaDB4dmY3aGt0ODA5eTdsbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TiXaxy3OtIfSStfGLP/giphy.gif)
 
+- This pack requires Minecraft Bedrock 1.21.100 or later.
+- This pack does not need any experiments.
+- Run `/nanocmds_help` to display the help menu.
+
 ## For Developers :computer:
 
 ### Prerequisites
