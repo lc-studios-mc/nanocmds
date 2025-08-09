@@ -20,7 +20,7 @@ const showHelpMenu = async (player) => {
 
 	formData.label(
 		`Type §b/n:§f in the chat, you should see many commands available.
-§eNote: You don't have to type "/n:" before commands.`,
+§eNote: You don't have to type 'n:' before commands.`,
 	);
 
 	formData.label(
