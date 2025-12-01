@@ -47,14 +47,8 @@ mc.system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
 });
 
 mc.world.beforeEvents.playerGameModeChange.subscribe((e) => {
-	if (
-		e.toGameMode === mc.GameMode.Spectator &&
-		e.fromGameMode !== mc.GameMode.Spectator
-	) {
-		e.player.setDynamicProperty(
-			"gameModeBeforeEnteringSpectator",
-			e.fromGameMode,
-		);
+	if (e.toGameMode === mc.GameMode.Spectator && e.fromGameMode !== mc.GameMode.Spectator) {
+		e.player.setDynamicProperty("gameModeBeforeEnteringSpectator", e.fromGameMode);
 		return;
 	}
 

@@ -29,10 +29,7 @@ const callback = defineCommandCallback((origin) => {
 
 		const raycastHit = player.getBlockFromViewDirection();
 
-		if (
-			!raycastHit ||
-			Vec3.distance(raycastHit.block.center(), player.getHeadLocation()) > 100
-		) {
+		if (!raycastHit || Vec3.distance(raycastHit.block.center(), player.getHeadLocation()) > 100) {
 			const tpLocation = new Vec3(Vec3.forward)
 				.scale(maxDistance)
 				.changeDir(player.getViewDirection())

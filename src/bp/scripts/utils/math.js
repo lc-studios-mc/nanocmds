@@ -43,11 +43,9 @@ export const randf = (min, max) => Math.random() * (max - min) + min;
  * @returns A float value
  */
 export const resolveRangeFloat = (range, fallback = 0) => {
-    if (range === undefined)
-        return fallback;
-    if (typeof range === "number")
-        return range;
-    return randf(range.min, range.max);
+	if (range === undefined) return fallback;
+	if (typeof range === "number") return range;
+	return randf(range.min, range.max);
 };
 /**
  * Resolves an integer value from a number, a Range, or undefined.
@@ -60,10 +58,8 @@ export const resolveRangeFloat = (range, fallback = 0) => {
  * @returns An integer value
  */
 export const resolveRangeInt = (range, fallback = 0) => {
-    if (range === undefined)
-        return fallback;
-    if (typeof range === "number")
-        return Math.floor(range);
-    return randi(range.min, range.max);
+	if (range === undefined) return fallback;
+	if (typeof range === "number") return Math.floor(range);
+	return randi(range.min, range.max);
 };
 //# sourceMappingURL=math.js.map
