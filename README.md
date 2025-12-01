@@ -10,7 +10,7 @@ Best commands (not all of them):
 
 - `/c`: Clears items only from the hotbar.
 - `/v`: Toggles the night vision effect.
-- `/s`: Toggles the spectator game mode.
+- `/s`: Smarter alternative to the /gamemode command that remembers your last choice.
 
 Make your own commands:
 
