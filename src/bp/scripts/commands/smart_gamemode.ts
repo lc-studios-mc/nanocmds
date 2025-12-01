@@ -2,7 +2,7 @@ import * as mc from "@minecraft/server";
 import { defineCommandCallback } from "../utils/define_command.js";
 import { prefixCommandDescription } from "../utils/misc.js";
 
-const callback = defineCommandCallback((origin) => {
+const callback = defineCommandCallback((origin, gamemodeArg) => {
 	const player = origin.sourceEntity;
 	if (!(player instanceof mc.Player)) {
 		return {
@@ -11,48 +11,49 @@ const callback = defineCommandCallback((origin) => {
 		};
 	}
 
+	gamemodeArg = gamemodeArg as string | undefined;
+
+	// TODO: Respect gamemode arg
+
 	mc.system.run(() => {
-		const currentGameMode = player.getGameMode();
+		const lastGameMode = player.getDynamicProperty("lastGameMode") as mc.GameMode | undefined;
+		const nextGameMode: mc.GameMode = lastGameMode ? lastGameMode : mc.GameMode.Spectator;
 
-		if (currentGameMode === mc.GameMode.Spectator) {
-			let gameModeBeforeEnteringSpectator = player.getDynamicProperty(
-				"gameModeBeforeEnteringSpectator",
-			);
-
-			if (typeof gameModeBeforeEnteringSpectator !== "string")
-				gameModeBeforeEnteringSpectator = undefined;
-
-			// @ts-ignore
-			player.setGameMode(gameModeBeforeEnteringSpectator);
-			player.playSound("random.pop", { location: player.location, pitch: 0.9 });
-			player.onScreenDisplay.setActionBar("Exited the Spectator game mode.");
-		} else {
-			player.setGameMode(mc.GameMode.Spectator);
-			player.playSound("random.pop", { location: player.location, pitch: 1.2 });
-			player.onScreenDisplay.setActionBar("Entered the Spectator game mode.");
-		}
+		player.setGameMode(nextGameMode);
+		player.playSound("random.pop", { location: player.location, pitch: 0.9 });
+		player.onScreenDisplay.setActionBar("Exited the Spectator game mode.");
 	});
 });
 
 mc.system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
+	customCommandRegistry.registerEnum("n:gamemode", [
+		"0",
+		"1",
+		"2",
+		"3",
+		"survival",
+		"creative",
+		"adventure",
+		"spectator",
+	]);
+
 	customCommandRegistry.registerCommand(
 		{
 			name: "n:s",
-			description: prefixCommandDescription("Toggles the spectator game mode."),
+			description: prefixCommandDescription("Smarter alternative to /gamemode"),
 			permissionLevel: mc.CommandPermissionLevel.Admin,
 			cheatsRequired: true,
+			optionalParameters: [
+				{
+					name: "n:gamemode",
+					type: mc.CustomCommandParamType.Enum,
+				},
+			],
 		},
 		callback,
 	);
 });
 
 mc.world.beforeEvents.playerGameModeChange.subscribe((e) => {
-	if (e.toGameMode === mc.GameMode.Spectator && e.fromGameMode !== mc.GameMode.Spectator) {
-		e.player.setDynamicProperty("gameModeBeforeEnteringSpectator", e.fromGameMode);
-		return;
-	}
-
-	if (e.toGameMode !== mc.GameMode.Spectator) {
-		e.player.setDynamicProperty("gameModeBeforeEnteringSpectator", undefined);
-	}
+	e.player.setDynamicProperty("lastGameMode", e.fromGameMode);
 });
