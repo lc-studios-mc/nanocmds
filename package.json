@@ -10,7 +10,7 @@
 		"format": "prettier --write ."
 	},
 	"dependencies": {
-		"@minecraft/server": "2.1.0",
+		"@minecraft/server": "2.2.0",
 		"@minecraft/server-ui": "2.0.0"
 	},
 	"devDependencies": {
