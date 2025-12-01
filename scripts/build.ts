@@ -34,7 +34,7 @@ const bpManifest = {
 	format_version: 2,
 	header: {
 		name: `${addonNameLabel} ${isDev ? "DEV" : versionLabel}`,
-		description: "Simple, small, and powerful commands with minimal keystrokes!",
+		description: "Very small and useful commands.",
 		uuid: uuids.bpHeader,
 		version: versionArray,
 		min_engine_version: minEngineVersion,
