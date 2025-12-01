@@ -3,10 +3,11 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"lint": "tsc",
-		"dev": "node scripts/dev.js",
-		"clean": "node scripts/clean.js",
+		"build": "tsx scripts/build.ts",
+		"build:dev": "dotenv -v DEV=1 -- tsx scripts/build.ts",
+		"build:dev:watch": "dotenv -v DEV=1 -v WATCH=1 -- tsx scripts/build.ts",
+		"clean": "shx rm -rf build",
+		"typecheck": "tsc && tsc -p scripts/tsconfig.json",
 		"format": "prettier --write ."
 	},
 	"dependencies": {
