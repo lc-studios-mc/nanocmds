@@ -149,11 +149,7 @@ mc.system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
 				},
 			],
 		},
-		(
-			origin,
-			/** @type {number} */ index,
-			/** @type {string|undefined} */ command,
-		) => {
+		(origin, /** @type {number} */ index, /** @type {string|undefined} */ command) => {
 			const indexValidationErrorMsg = validateUserCustomCommandIndex(index);
 			if (indexValidationErrorMsg !== undefined) {
 				return {

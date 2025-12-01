@@ -1,14 +1,23 @@
+// This is a base config extended by other tsconfig files
 {
 	"compilerOptions": {
-		"module": "nodenext",
-		"moduleResolution": "nodenext",
-		"allowJs": true,
-		"checkJs": true,
-		"noUncheckedSideEffectImports": true,
+		"moduleDetection": "force",
+		"verbatimModuleSyntax": true,
+		"isolatedModules": true,
 		"skipLibCheck": true,
-		"forceConsistentCasingInFileNames": true,
+
+		// This repository uses an external bundler to emit JavaScript, so the standard tsc
+		// compiler is not required for emitting.
+		"noEmit": true,
+
+		// Strictness
 		"strict": true,
-		"noImplicitAny": false,
-		"noUncheckedIndexedAccess": true
+		"noUncheckedIndexedAccess": true,
+		"noUncheckedSideEffectImports": true,
+		"noImplicitOverride": true,
+
+		// Keep JavaScript files unchecked (you might want to delete this)
+		"allowJs": true,
+		"checkJs": false
 	}
 }

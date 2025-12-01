@@ -14,9 +14,7 @@ const callback = defineCommandCallback((origin) => {
 	mc.system.run(() => {
 		const result = player.runCommand("kill @e[type=item]");
 
-		player.onScreenDisplay.setActionBar(
-			`Killed ${result.successCount} item entities.`,
-		);
+		player.onScreenDisplay.setActionBar(`Killed ${result.successCount} item entities.`);
 
 		player.playSound("random.burp", {
 			location: player.location,

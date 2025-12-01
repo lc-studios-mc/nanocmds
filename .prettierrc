@@ -1,5 +1,14 @@
 {
-	"printWidth": 80,
+	"endOfLine": "lf",
 	"useTabs": true,
-	"endOfLine": "lf"
+	"printWidth": 100,
+	"overrides": [
+		{
+			"files": "*.md",
+			"options": {
+				"useTabs": false,
+				"tabWidth": 2
+			}
+		}
+	]
 }

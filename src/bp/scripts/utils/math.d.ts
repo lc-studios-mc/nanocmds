@@ -34,8 +34,8 @@ export declare const randi: (min: number, max: number) => number;
 export declare const randf: (min: number, max: number) => number;
 /** Represents a numeric range with minimum and maximum values. */
 export type Range = {
-    min: number;
-    max: number;
+	min: number;
+	max: number;
 };
 /**
  * Resolves a float value from a number, a Range, or undefined.

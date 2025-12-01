@@ -1,24 +1,29 @@
 {
 	"name": "nanocmds",
+	"version": "1.0.0",
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"lint": "tsc",
-		"dev": "node scripts/dev.js",
-		"clean": "node scripts/clean.js",
+		"build": "tsx scripts/build.ts",
+		"build:dev": "dotenv -v DEV=1 -- tsx scripts/build.ts",
+		"build:dev:watch": "dotenv -v DEV=1 -v WATCH=1 -- tsx scripts/build.ts",
+		"clean": "shx rm -rf build",
+		"typecheck": "tsc && tsc -p scripts/tsconfig.json",
 		"format": "prettier --write ."
 	},
 	"dependencies": {
-		"@minecraft/server": "2.1.0",
-		"@minecraft/server-ui": "2.0.0"
+		"@mcbe-toolbox-lc/vecarr": "^0.1.3",
+		"@minecraft/server": "2.2.0",
+		"@minecraft/server-ui": "2.0.0",
+		"gl-matrix": "^3.4.4"
 	},
 	"devDependencies": {
-		"@types/archiver": "^6.0.3",
+		"@mcbe-toolbox-lc/builder": "^0.1.1",
 		"@types/node": "^22.17.0",
-		"archiver": "^6.0.2",
+		"dotenv-cli": "^11.0.0",
 		"prettier": "^3.6.2",
-		"sync-directory": "^6.0.5",
+		"shx": "^0.4.0",
+		"tsx": "^4.21.0",
 		"typescript": "^5.9.2"
 	}
 }

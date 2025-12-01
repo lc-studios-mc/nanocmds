@@ -13,8 +13,7 @@ const callback = defineCommandCallback((origin) => {
 
 	mc.system.run(() => {
 		const container = player.getComponent("inventory")?.container;
-		if (!container)
-			throw new Error("Failed to get the player's inventory container object.");
+		if (!container) throw new Error("Failed to get the player's inventory container object.");
 
 		for (let i = 0; i < 9; i++) {
 			container.setItem(i, undefined);
